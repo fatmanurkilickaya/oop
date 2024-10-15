@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Program // sınıf-class
+    {
+        static void Main(string[] args)
+        {
+            //nesne oluştururum...
+            //class isimleriyle new metodu oluşturulur.
+            Kisi k = new Kisi("Kılıçkaya","Fatma Nur");// constroctur blogu oluşturarak nesne çağırma
+            k.SoyisminiGoster();
+
+            Person person = new Person() // constroctur blogu oluşturmadan nesne çağırma
+            {
+                name = "Fatma Nur",
+                surname = "Kılıçkaya"
+
+            };
+            person.Show();
+
+        }
+    }
+    public class Kisi // sınıf
+    {
+        string ad, soyad; // değişken ismi
+        public Kisi(string babaSoyad, string cocukAd) //metot (parametre)
+        {
+           this.ad = cocukAd;
+           this.soyad = babaSoyad;
+            
+        }
+        public void SoyisminiGoster() //metot
+        {
+            Console.WriteLine($"Çocuk ismi: {ad}," +
+                $" çocuk soyismi: {soyad}");
+            Console.ReadKey();
+        }
+
+    }
+
+    public class Person
+    {
+        public string name, surname;
+        
+        public void Show()
+        {
+            Console.WriteLine($"Çocuk ismi: {name}," +
+                $" çocuk soyismi: {surname}");        
+        }
+    }
+}
