@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Kisi k1 = new Kisi("Kılıçkaya", 45665);
+            //k1.BilgileriGetir2();
+
+
+            //Kisi k2 = new Kisi("Fatma Nur", "Kılıçkaya");
+            //k2.BilgileriGetir();
+
+            Kisi kisi = new Kisi
+            {
+                ad ="Fatma Nur",
+                soyad ="Kılıçkaya"
+
+            };
+            kisi.BilgileriGetir();
+            Console.ReadKey();
+
+        }
+    }
+}
+----------------------------------------------------
+  using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Kisi
+    {
+        public string ad, soyad;
+        int tcKimlik;
+        //public Kisi(string babasoyad, int tcNo) 
+        //{ 
+        //   this.soyad = babasoyad;
+        //   this.tcKimlik = tcNo;
+
+        //}
+
+        //public Kisi(string name,string babasoyad) 
+        //{ 
+        //    this.ad = name;
+        //    this.soyad = babasoyad;
+        //}
+        public void BilgileriGetir()
+        {
+            Console.WriteLine($"isim: {ad} Soyisim: {soyad}");
+        }
+        public void BilgileriGetir2()
+        {
+            Console.WriteLine($"Soyisim: {soyad} tckimlik: {tcKimlik}");
+
+        }
+    }
+}
