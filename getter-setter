@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Ogrenci
+    {
+        public string ogrNo {  get; set; } // property
+
+        //propertinin açılımı
+        private string _no;
+
+        public string ogrNO
+        {
+            get { return _no; }
+            set { _no = value; }
+        }
+    }
+}
