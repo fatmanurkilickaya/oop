@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        //Ogrenci2 m1 = new Ogrenci2("FatmaNur");
+        //m1.getIsim();
+        Ogrenci2.getIsim();
+        //NameProperty.name2 = "Fatmanur";
+        NameProperty np = new NameProperty();
+        np.name2 = "fatmanur";
+        np.BilgileriGetir();
+        Console.WriteLine(np.name2);
+    }
+}
+
+    internal class NameProperty // NameProperty sınıfı
+    {
+        public string name;// global değişken 
+        //public static string name2 {  get; set; } // property
+        public string name2 {  get; set; }
+        public void BilgileriGetir()
+        {
+            Console.WriteLine(name2);
+        }
+    }
+
+public class Ogrenci // Ogrenci sınıfı
+ {
+     public string ogrNo {  get; set; } // property
+
+     private string _no;
+
+     public string ogrNO
+     {
+         get { return _no; }
+         set { _no = value; }
+     }
+ }
+
+ public class Ogrenci2 // ogrenci2 sınıfı
+ {
+ 
+     public  int ogrNO; // global değişken
+     public string isim;
+     public  Ogrenci2(string ogrenciad)
+     {
+         this.isim = ogrenciad;
+     }
+     public static void getIsim()
+     {
+         Console.WriteLine($"ismin değeri {isim}");
+     }
+     public void setValue(int ogrNO)//metot-fonksiyon
+     {
+        
+     }
+
+ }
+}
