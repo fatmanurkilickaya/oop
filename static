@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Ogrenci m1 = new Ogrenci("FatmaNur");
+            //m1.getIsim();
+            Ogrenci.getIsim();
+        }
+    }
+    public class Ogrenci
+    {
+    
+        public  int ogrNO; // global değişken
+        public string isim;
+        public  Ogrenci(string ogrenciad)
+        {
+            this.isim = ogrenciad;
+        }
+        public static void getIsim()
+        {
+            Console.WriteLine($"ismin değeri {isim}");
+        }
+        public void setValue(int ogrNO)//metot-fonksiyon
+        {
+           
+        }
+
+    }
+}
