@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Kisi kisi = new Kisi("Fatma Nur", "Kılıçkaya");
+            //Console.WriteLine(kisi);
+            Kisi.adi = "Fatma NUr";
+            Kisi.soyadi = "Kılıçkaya";
+        }
+    }
+
+    public  class Kisi
+    {
+        public static string adi;
+        public static string soyadi;
+
+        public Kisi(string yeniadi, string yenisoyadi)
+        {
+            this.adi = yeniadi;
+            this.soyadi = yenisoyadi;
+        }
+
+    }
+}
