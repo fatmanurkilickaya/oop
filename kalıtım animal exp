@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+         Dog dog = new Dog();
+         dog.getName("kangal");
+         Console.ReadKey(); 
+
+        }
+    }
+
+    public class Animal
+    {
+        protected string name;
+        public void wolk()
+        {
+            Console.WriteLine("Hayvanlar yürüdüğünde köpeğin ismi geldi");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public void getName(string isim)
+        {
+            wolk();
+            Console.WriteLine(name);
+        }
+
+    }
+
+}
