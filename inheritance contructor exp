@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+         
+            BengalKaplanı bk = new BengalKaplanı();
+
+
+        }
+    }
+
+    public class Hayvan
+    {
+        public Hayvan() 
+        {
+            Console.WriteLine("Hayvan sınıfının yapıcı metodu çalıştı");
+        }
+
+    }
+
+    public class Kaplan : Hayvan
+    {
+        public Kaplan() {
+            Console.WriteLine("Kaplan sınıfının yapıcı metodu çalıştı");
+        }
+    }
+
+    public class BengalKaplanı : Kaplan
+    {
+        public BengalKaplanı() {
+            Console.WriteLine("BengalKaplanı sınıfının yapıcı metodu çalıştı");
+            Console.ReadKey();
+        }
+    }
+
+
+
+
+
+
+
+}
