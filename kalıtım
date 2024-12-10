@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Araba araba = new Araba("Abdussamed","İlhan");
+            araba.IsimBilgisi();
+            araba.Open();
+            araba.Close();
+            Console.ReadKey();
+        }
+    }
+
+    public class Motor
+    {
+        public void Open()
+        {
+            Console.WriteLine("Motor çalıştı");
+
+        }
+
+        public void Close()
+        {
+            Console.WriteLine("Motor kapatıldı");
+
+        }
+
+    }
+
+    public class Araba : Motor
+    {
+        string isim, soyisim;
+
+        public Araba(string isim,string soyisim)
+        {
+            this.isim = isim;
+            this.soyisim = soyisim;
+        }
+
+        public void IsimBilgisi()
+        {
+            Console.WriteLine($"Araç Sahibi:{this.isim} {this.soyisim}");
+        }
+
+    }
+
+
+}
