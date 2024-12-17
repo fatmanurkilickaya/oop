@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Kare kare = new Kare();
+            kare.AlanHesapla(2, 2);
+            kare.CevreHesapla(2, 2);
+
+
+        }
+        public class Cokgen
+       {
+          public int sonuc;
+          public void AlanHesapla(int w, int h)
+          {
+                sonuc = w * h;
+                Console.Write(sonuc);
+
+          }
+
+          public void CevreHesapla(int w, int h)
+          {
+                sonuc = 2*(w + h);
+                Console.Write(sonuc);
+            }
+       }
+
+       public class Kare :Cokgen
+        {
+          public void KareDegerler(int a, int b)
+            {
+                Console.Write("Karenin bilgileri hesaplandı");
+
+            }
+        }
+
+        public class Dikdortgen : Cokgen
+        {
+            public void DikdortgenDegerler(int x, int y)
+            {
+                Console.Write("Dikdortgenin bilgileri hesaplandı");
+
+            }
+        }
+    }
+}
